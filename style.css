@@ -16,3 +16,7 @@ body {
 #category {
     font-size: small;
 }
+
+img {
+    padding: 10px;
+}

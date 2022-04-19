@@ -52,7 +52,6 @@ const lineTwo = document.getElementById("line-two")
 let categoryLine = document.getElementById("category")
 categoryLine.textContent = `Catergory: ${data.category}`
 
-
 if (data.type === "single"){
     lineOne.textContent = data.joke
 
