@@ -13,8 +13,6 @@ document.addEventListener("DOMContentLoaded", () => {
     allJokeBtn.addEventListener("click", ()=> {alert("caution: all jokes enabled"), jokeUrl = "https://v2.jokeapi.dev/joke/Any?"})
     easterEgg.addEventListener("mouseover", ()=> alert("Thank you for checking out our page. We greatly appreciate the public APIs that made this possible"))
 
-
-
 })
 // global variables
 
@@ -40,7 +38,6 @@ const renderMemes = (returnFromFetch) => {
     returnFromFetch.data.memes.forEach(meme => {
         ul = document.getElementById("meme-list")
         img = document.createElement("img")
-        memeName = document.getElementById("meme-name")
         img.src = meme.url
         img.width = 325
         img.height = 350
@@ -58,10 +55,8 @@ categoryLine.textContent = `Catergory: ${data.category}`
 
 if (data.type === "single"){
     lineOne.textContent = data.joke
-    
 
 }else 
     lineOne.textContent = data.setup
     lineTwo.textContent = data.delivery
-    
 }
