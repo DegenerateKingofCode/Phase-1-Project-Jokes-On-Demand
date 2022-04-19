@@ -1,44 +1,54 @@
 
 document.addEventListener("DOMContentLoaded", () => {
-    fetch("https://v2.jokeapi.dev/joke/Any?safe-mode")
-    .then(res => res.json())
-    .then(data => oneOrTwoParter(data))
+   fetchJoke(jokeUrl)
+    
+    
+    const allJokeBtn = document.getElementById("all-joke-filter")
+    const safeModeBtn = document.getElementById("safe-mode-filter")
+    const getJokeBtn = document.getElementById("new-joke-button")
+    getJokeBtn.addEventListener("click",() => fetchJoke(jokeUrl))
+    safeModeBtn.addEventListener("click", safeMode)
+    allJokeBtn.addEventListener("click", makeAllJokesAvail)
 
-    // const allJokeBtn = document.getElementById("all-joke-filter")
-    // const safeModeBtn = document.getElementById("safe-mode-filter")
-    // const getJokeBtn = document.getElementById("new-joke-button")
-    // getJokeBtn.addEventListener("click",() => getNewJoke)
+    function makeAllJokesAvail(){
+        jokeUrl = "https://v2.jokeapi.dev/joke/Any?"
+        console.log(jokeUrl)}
+
+    function safeMode() {
+        jokeUrl = "https://v2.jokeapi.dev/joke/Any?safe-mode"
+        }
 
 })
+// global variables
+
+let jokeUrl = "https://v2.jokeapi.dev/joke/Any?safe-mode"
+
 
 //callback functions 
 
-function oneOrTwoParter (data){
+const fetchJoke = (jokeUrl) => {
+    fetch(jokeUrl)
+    .then(res => res.json())
+    .then(data => oneOrTwoParter(data))
+
+}
+const oneOrTwoParter = (data) => {
 
 const lineOne = document.getElementById("line-one")
 const lineTwo = document.getElementById("line-two")
+let categoryLine = document.getElementById("category")
+
+
+
 if (data.type === "single"){
     lineOne.textContent = data.joke
+    categoryLine = data.category
 
 }else 
     lineOne.textContent = data.setup
     lineTwo.textContent = data.delivery
+    categoryLine = data.category
 }
 
 
-// function makeAllJokesAvail(){
 
-// }
-
-// const getNewJoke = () => {
-
-//  const lineOne = document.getElementById("line-one")
-//  const lineTwo = document.getElementById("line-two")
-
-// fetch("https://v2.jokeapi.dev/joke/Any?")
-// .then(res => res.json())
-// .then(data => oneOrTwoParter(data)
-
-// )}
-
-// function safeMode() {
