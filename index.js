@@ -1,6 +1,6 @@
 
 document.addEventListener("DOMContentLoaded", () => {
-    fetchJoke(jokeUrl)
+    // fetchJoke(jokeUrl)
     fetchMeme(memeUrl)
      
      const allJokeBtn = document.getElementById("all-joke-filter")
@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
      const easterEgg = document.getElementById("easter-egg")
      const programming = document.getElementById("programming-filter")
      const spooky = document.getElementById('spooky-filter')
+    
  
      getJokeBtn.addEventListener("click",() => fetchJoke(jokeUrl))
      safeModeBtn.addEventListener("click", ()=> {alert("safe mode enabled", jokeUrl = "https://v2.jokeapi.dev/joke/Any?safe-mode")})
@@ -16,7 +17,6 @@ document.addEventListener("DOMContentLoaded", () => {
      easterEgg.addEventListener("mouseover", ()=> alert("Thank you for checking out our page. We greatly appreciate the public APIs that made this possible"))
      programming.addEventListener('click', () => {alert("programming jokes enabled"), jokeUrl = 'https://v2.jokeapi.dev/joke/Programming'})
      spooky.addEventListener('click', () => {alert("Spooky Jokes Enabled"), jokeUrl="https://v2.jokeapi.dev/joke/Spooky"})
- 
  })
  // global variables
  
