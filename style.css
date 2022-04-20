@@ -31,3 +31,12 @@ img {
     display: inline-block;
     font-size: 12px;}
 
+    .button1{
+        background-color: blue,
+        text-align: center,
+    text-decoration: none,
+    display: inline-block,
+    font-size: 12px,
+    padding: 9px 9px,
+    }
+

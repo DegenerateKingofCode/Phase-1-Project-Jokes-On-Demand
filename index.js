@@ -13,21 +13,12 @@ document.addEventListener("DOMContentLoaded", () => {
      
  
      getJokeBtn.addEventListener("click",() => fetchJoke(jokeUrl))
-     safeModeBtn.addEventListener("click", ()=> {safeModeBtn.innerHTML = "Clicked", jokeUrl = "https://v2.jokeapi.dev/joke/Any?safe-mode"})
-     allJokeBtn.addEventListener("click", ()=> {allJokeBtn.innerHTML = "Clicked", jokeUrl = "https://v2.jokeapi.dev/joke/Any?"})
+     safeModeBtn.addEventListener("click", (e)=> {changeColor(e) = "Clicked", jokeUrl = "https://v2.jokeapi.dev/joke/Any?safe-mode"})
+     allJokeBtn.addEventListener("click", (e)=> {changeColor(e) = "Clicked", jokeUrl = "https://v2.jokeapi.dev/joke/Any?"})
      easterEgg.addEventListener("mouseover", ()=> alert("Thank you for checking out our page. We greatly appreciate the public APIs that made this possible"))
-     programming.addEventListener('click', () => {programming.innerHTML = "Clicked", jokeUrl = 'https://v2.jokeapi.dev/joke/Programming'})
-     reset.addEventListener('click', function(){
-        programming.innerHTML = "Programming Jokes"
-      safeModeBtn.innerHTML = "Safe Mode"
-      allJokeBtn.innerHTML = "All Jokes"
-      spooky.innerHTML ="Spooky Jokes"
-     })
-    //  spooky.addEventListener('click', () => {alert("Spooky Jokes Enabled"), jokeUrl="https://v2.jokeapi.dev/joke/Spooky"})
-    spooky.addEventListener('click', function(){
-        jokeUrl="https://v2.jokeapi.dev/joke/Spooky"
-        spooky.innerHTML= "Clicked"
-    })
+     programming.addEventListener('click', (e) => {changeColor(e) = "Clicked", jokeUrl = 'https://v2.jokeapi.dev/joke/Programming'})
+     spooky.addEventListener('click', (e) => {changeColor(e), jokeUrl="https://v2.jokeapi.dev/joke/Spooky"})
+   
  
  })
  // global variables
@@ -76,4 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
      lineTwo.textContent = data.delivery
  }
 
- 
+ function changeColor(e){
+    //  document.getElementById("programming-filter").style.color = "blue"
+    e.target.style.color = "blue";
+ }
