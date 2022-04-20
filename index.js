@@ -9,18 +9,13 @@ document.addEventListener("DOMContentLoaded", () => {
      const easterEgg = document.getElementById("easter-egg")
      const programming = document.getElementById("programming-filter")
      const spooky = document.getElementById('spooky-filter')
-<<<<<<< HEAD
      const reset = document.getElementById('reset')
      
-=======
-    
->>>>>>> fc324002bd507c4283a05fe423a4fdf4ed34191c
  
      getJokeBtn.addEventListener("click",() => fetchJoke(jokeUrl))
      safeModeBtn.addEventListener("click", ()=> {safeModeBtn.innerHTML = "Clicked", jokeUrl = "https://v2.jokeapi.dev/joke/Any?safe-mode"})
      allJokeBtn.addEventListener("click", ()=> {allJokeBtn.innerHTML = "Clicked", jokeUrl = "https://v2.jokeapi.dev/joke/Any?"})
      easterEgg.addEventListener("mouseover", ()=> alert("Thank you for checking out our page. We greatly appreciate the public APIs that made this possible"))
-<<<<<<< HEAD
      programming.addEventListener('click', () => {programming.innerHTML = "Clicked", jokeUrl = 'https://v2.jokeapi.dev/joke/Programming'})
      reset.addEventListener('click', function(){
         programming.innerHTML = "Programming Jokes"
@@ -34,10 +29,6 @@ document.addEventListener("DOMContentLoaded", () => {
         spooky.innerHTML= "Clicked"
     })
  
-=======
-     programming.addEventListener('click', () => {alert("programming jokes enabled"), jokeUrl = 'https://v2.jokeapi.dev/joke/Programming'})
-     spooky.addEventListener('click', () => {alert("Spooky Jokes Enabled"), jokeUrl="https://v2.jokeapi.dev/joke/Spooky"})
->>>>>>> fc324002bd507c4283a05fe423a4fdf4ed34191c
  })
  // global variables
  
