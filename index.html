@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width initial-scale=1.0"  >
     <title>Jokes On Demand</title>
     <link rel="stylesheet" href="style.css">
     <script src="index.js" ></script>
@@ -11,18 +11,42 @@
   <body>
     <h1 id="Title"> Jokes on Demand</h1>
     <h2 id= "Title-sub-heading"> Helping bring laughs to a screen near you</h2>
+    <h4 id ="Joke-Box-Directions"> Please press Safe Mode to ensure family friendly jokes, pressing the All Jokes button will include jokes that may be inappropriate or NSFW</h4>
     <div id="Joke-Box">
-        <button id="safe-mode-filter"> Safe Mode </button>
-        <button id="all-joke-filter"> All Jokes </button>
+        <button id="safe-mode-filter" class="button"> Safe Mode </button>
+        <button id="all-joke-filter" class="button"> All Jokes </button>
+        <button id="programming-filter" class="button">Programming jokes</button>
+        <button id="spooky-filter" class="button">Spooky jokes</button>
+        <p id = "category"> Category</p>
 
 
         <p id="line-one"> Joke one-liners will arrive here or first line</p>
         <p id="line-two"> Joke punch-line will arrive here for two-parters</p>
-        <button id="new-joke-button"> Get a new Joke </button>
+        <button id="new-joke-button" class="button"> Get a new Joke </button>
+       
+
+</div>
+<!-- <form id="submit">
+  <label for="Catergory">Category:</label>
+  <input type="text" Category="Category" id="new-category"/>
+  <label for="Joke">Joke:</label>
+  <input type="text" Joke="Joke" id="new-joke"/>
+  <label for="answer">Answer:</label>
+  <input type="text" Answer="Answer" id="answer"/>
+  <button type="submit" class="button">Submit joke</button>
 
 
+</form> -->
+
+
+
+    <section>
+        <h2>A collection of memes</h2>
+        <h4>Save the image and open into an image editor to create your own meme</h4>
+        <ul id="meme-list"></ul>
     </section>
 
+    <p id="easter-egg">TL!AB</p>
 
   </body>
 

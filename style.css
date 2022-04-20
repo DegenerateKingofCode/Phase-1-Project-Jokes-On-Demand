@@ -10,5 +10,35 @@ body {
     display: block;
     margin-left: 450px;
     margin-right: 450px;
+    height: fit-content;
 
 }
+#category {
+    font-size: small;
+}
+
+img {
+    padding: 10px;
+}
+
+.button {
+    background-color:red;
+    border: none;
+    color: rgb(255, 255, 255);
+    padding: 9px 9px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;}
+
+    #submit{
+        text-align: center;
+        height: fit-content;
+        width: 100%;
+        padding: 12px 20px;
+        margin: 1px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
