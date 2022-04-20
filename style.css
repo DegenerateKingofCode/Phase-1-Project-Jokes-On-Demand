@@ -29,6 +29,7 @@ img {
     text-align: center;
     text-decoration: none;
     display: inline-block;
+<<<<<<< HEAD
     font-size: 12px;}
 
     #submit{
@@ -42,3 +43,6 @@ img {
         border-radius: 4px;
         box-sizing: border-box;
     }
+=======
+    font-size: 12px;}
+>>>>>>> 9afce5ef54e0361087dd91c26045643df1a4131f
