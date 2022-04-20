@@ -39,7 +39,7 @@ const renderMemes = (returnFromFetch) => {
         ul = document.getElementById("meme-list")
         img = document.createElement("img")
         img.src = meme.url
-        img.width = 325
+        img.width = 350
         img.height = 350
         
         ul.append(img)
