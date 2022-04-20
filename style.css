@@ -29,20 +29,5 @@ img {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-<<<<<<< HEAD
     font-size: 12px;}
 
-    #submit{
-        text-align: center;
-        height: fit-content;
-        width: 100%;
-        padding: 12px 20px;
-        margin: 1px 0;
-        display: inline-block;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        box-sizing: border-box;
-    }
-=======
-    font-size: 12px;}
->>>>>>> 9afce5ef54e0361087dd91c26045643df1a4131f
