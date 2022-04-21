@@ -22,15 +22,14 @@ document.addEventListener("DOMContentLoaded", () => {
  
  let jokeUrl = "https://v2.jokeapi.dev/joke/Any?safe-mode"
  
- let memeUrl = "https://api.imgflip.com/get_memes"
  
  //callback functions 
  
- const fetchMeme = (memeUrl) => {
-     fetch(memeUrl)
-     .then(res => res.json())
-     .then(data => renderMemes(data))
- }
+//  const fetchMeme = (memeUrl) => {
+//      fetch(memeUrl)
+//      .then(res => res.json())
+//      .then(data => renderMemes(data))
+//  }
  
  const fetchJoke = (jokeUrl) => {
      fetch(jokeUrl)
@@ -50,10 +49,10 @@ document.addEventListener("DOMContentLoaded", () => {
 //      })
 //  }
 
-  function renderMemes(element){
+//   function renderMemes(element){
       
-      element.data.memes.forEach(element => randomItems(element))
-  }
+//       element.data.memes.forEach(element => randomItems(element))
+//   }
 
 //   function getRandomImages(meme){
 //    const memeLanding = document.getElementById('meme-land')
@@ -109,7 +108,7 @@ document.addEventListener("DOMContentLoaded", () => {
      random_index = Math.floor(Math.random() * image_array.length)
      selected_image = image_array[random_index]
 
-     document.getElementById('image_tag').src = `./images2/${selected_image}`
+     document.getElementById('image_tag').src = `./Images2/${selected_image}`
     const memeLand = document.getElementById('meme-land')
     const imageTag = document.getElementById('image_tag')
     memeLand.append(imageTag)
