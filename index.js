@@ -1,10 +1,6 @@
 
 document.addEventListener("DOMContentLoaded", () => {
-    fetchJoke(jokeUrl)
-
-    // fetchMeme(memeUrl)
-
-    fetchMeme(memeUrl)
+  
      
      const allJokeBtn = document.getElementById("all-joke-filter")
      const safeModeBtn = document.getElementById("safe-mode-filter")
@@ -13,22 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
      const programming = document.getElementById("programming-filter")
      const spooky = document.getElementById('spooky-filter')
      const meme = document.getElementById('meme-fetch')
-     meme.addEventListener('click', function(data){
-         const image = document.createElement('img')
-        image.src = data.url
-         memeLanding.append(image)
-         fetch(memeUrl)
-         .then(res => res.json())
-         .then(url=> {
-             memeLanding.innerHTML = `<img src="${url}}"/>`
-          
-           
-         })
-     })
 
-  
-     
-     const memeLanding = document.getElementById('meme-land')
      getJokeBtn.addEventListener("click",() => {fetchJoke(jokeUrl), fetchMeme(meme)})
      safeModeBtn.addEventListener("click", (e)=> {changeColor(e) , jokeUrl = "https://v2.jokeapi.dev/joke/Any?safe-mode"})
      allJokeBtn.addEventListener("click", (e)=> {changeColor(e), jokeUrl = "https://v2.jokeapi.dev/joke/Any?"})
@@ -36,17 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
      programming.addEventListener('click', (e) => {changeColor(e) , jokeUrl = 'https://v2.jokeapi.dev/joke/Programming'})
      spooky.addEventListener('click', (e) => {changeColor(e), jokeUrl="https://v2.jokeapi.dev/joke/Spooky"})
    
- 
-=======
     
- 
-     getJokeBtn.addEventListener("click",() => fetchJoke(jokeUrl))
-     safeModeBtn.addEventListener("click", ()=> {alert("safe mode enabled", jokeUrl = "https://v2.jokeapi.dev/joke/Any?safe-mode")})
-     allJokeBtn.addEventListener("click", ()=> {alert("caution: all jokes enabled"), jokeUrl = "https://v2.jokeapi.dev/joke/Any?"})
-     easterEgg.addEventListener("mouseover", ()=> alert("Thank you for checking out our page. We greatly appreciate the public APIs that made this possible"))
-     programming.addEventListener('click', () => {alert("programming jokes enabled"), jokeUrl = 'https://v2.jokeapi.dev/joke/Programming'})
-     spooky.addEventListener('click', () => {alert("Spooky Jokes Enabled"), jokeUrl="https://v2.jokeapi.dev/joke/Spooky"})
-
  // global variables
  
  let jokeUrl = "https://v2.jokeapi.dev/joke/Any?safe-mode"
@@ -55,11 +26,11 @@ document.addEventListener("DOMContentLoaded", () => {
  
  //callback functions 
  
-//  const fetchMeme = (memeUrl) => {
-//      fetch(memeUrl)
-//      .then(res => res.json())
-//      .then(data => renderMemes(data))
-//  }
+ const fetchMeme = (memeUrl) => {
+     fetch(memeUrl)
+     .then(res => res.json())
+     .then(data => renderMemes(data))
+ }
  
  const fetchJoke = (jokeUrl) => {
      fetch(jokeUrl)
@@ -79,10 +50,10 @@ document.addEventListener("DOMContentLoaded", () => {
 //      })
 //  }
 
-//   function renderMemes(element){
-//       console.log(element)
-//       element.data.memes.forEach(meme => getRandomImages(meme))
-//   }
+  function renderMemes(element){
+      
+      element.data.memes.forEach(element => randomItems(element))
+  }
 
 //   function getRandomImages(meme){
 //    const memeLanding = document.getElementById('meme-land')
@@ -107,11 +78,42 @@ document.addEventListener("DOMContentLoaded", () => {
      lineOne.textContent = data.setup
      lineTwo.textContent = data.delivery
  }
- const content = {lineOne, lineTwo, categoryLine}
+
 
  function changeColor(e){
     e.target.style.color = "blue";
-   
+ }})
+
+ image_array = [
+     'image1.jpeg',
+     'image2.jpeg',
+     '3.jpeg',
+     '4.jpeg',
+     '5.jpeg',
+     '6.jpeg',
+     '7.jpeg',
+     '8.jpeg',
+     '9.jpeg',
+     '10.jpeg',
+     '11.jpeg',
+     '12.jpeg',
+     '13.jpeg',
+     '14.jpeg',
+     '15.jpeg',
+     '16.jpeg'
+     
+     
+ ]
+
+ function get_random_image(){
+     random_index = Math.floor(Math.random() * image_array.length)
+     selected_image = image_array[random_index]
+
+     document.getElementById('image_tag').src = `./images2/${selected_image}`
+    const memeLand = document.getElementById('meme-land')
+    const imageTag = document.getElementById('image_tag')
+    memeLand.append(imageTag)
  }
 
-image_array = [];
+
+  
